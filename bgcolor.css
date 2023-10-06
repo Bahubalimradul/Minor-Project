@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mooli', sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+#main {
+  width: 100%;
+}
+
+#landingpage {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+/* CSS for Menu bar */
+#nav {
+  width: 100%;
+  color: antiquewhite;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  /* position: fixed; */
+  z-index: 99;
+}
+
+#left {
+  display: flex;
+  margin-top: 5px;
+  margin-left: 10px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#left img {
+  height: 25px;
+  padding: 0 12px;
+  border-radius: 50%;
+}
+
+#right {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-right: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  gap: 20px;
+}
+
+#right a:hover {
+  font-size: 22px;
+  /* color: rgb(116, 111, 111); */
+  /* transition-delay: 0.1s;
+  transition-property: smooth; */
+  /* transition: 0.2s ; */
+  transition: all 0.3s ease-in 0s;
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+/* CSS for Animation of Sun, Earth, Moon */
+#animation {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.container {
+  font-size: 10px;
+  width: 40em;
+  height: 40em;
+  position: relative;
+  justify-content: center;
+}
+
+.sun {
+  position: absolute;
+  top: 15em;
+  left: 15em;
+  width: 10em;
+  height: 10em;
+  background-color: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 3em white;
+}
+
+.earth,
+.moon {
+  position: absolute;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  border-width: 0.1em 0.1em 0 0;
+  border-radius: 50%;
+}
+
+.earth {
+  top: 5em;
+  left: 5em;
+  width: 30em;
+  height: 30em;
+  animation: orbit 36.5s linear infinite;
+}
+
+.moon {
+  top: 0;
+  right: 0;
+  width: 8em;
+  height: 8em;
+  animation: orbit 2.7s linear infinite;
+}
+
+.earth::before,
+.moon::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.earth::before {
+  top: 2.8em;
+  right: 2.8em;
+  width: 3em;
+  height: 3em;
+  background-color: aqua;
+}
+
+.moon::before {
+  top: 0.8em;
+  right: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  background-color: silver;
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  color: azure;
+  position: absolute;
+  opacity: 1.0;
+  font-size: 30px;
+  margin: 10% 60% 100% 12%;
+  /* padding: 10px; */
+  z-index: 999;
+}
+
+p {
+  color: azure;
+  position: absolute;
+  opacity: 1.0;
+  font-size: 30px;
+  margin: 15% 75% 75% 15%;
+  padding: 10px;
+  z-index: 999;
+}
+
+/* CSS for Media Links */
+.social-buttons {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 38%;
+  z-index: 99;
+}
+
+.social-buttons a {
+  list-style-type: none;
+  font-size: 22px;
+  color: #fff;
+  position: relative;
+  padding: 5px;
+  transition: .6s;
+}
+
+.social-buttons a:hover {
+  padding: 10px 15px;
+}
+
+
+.social-buttons a i {
+  transition: 0.5s ease-in;
+}
+
+.social-buttons a:hover i {
+  background: linear-gradient(45deg, #ffffff, #461f1f);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.4);
+}
+
+.social-buttons a:nth-child(1) {
+  /*Linkedin*/
+  background: #007bb6;
+  color: white;
+}
+
+.social-buttons a:nth-child(2) {
+  /*Twitter*/
+  color: white;
+  background: #00aced;
+}
+
+.social-buttons a:nth-child(3) {
+  /*Instagram*/
+  background: #3f729b;
+  color: white;
+}
+
+.social-buttons a:nth-child(4) {
+  /*Whatsapp*/
+  background: #951414;
+  color: white;
+}
+
+
+
+#note {
+  z-index: 99;
+  width: 40vw;
+  margin: 3% 0 0 5%;
+  padding-left: 3%;
+  position: absolute;
+}
+
+#note h3 {
+  color: azure;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+#note p {
+  color: beige;
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+.newsletter {
+  position: relative;
+  /* height: 10%; */
+  width: 30vw;
+  margin-left: 55%;
+  margin-top: 5%;
+  background: transparent;
+  color: rgb(16, 85, 149);
+  border-radius: 16px;
+  padding: 0 20px 20px 20px;
+  border: 2px solid rgba(16, 33, 213, 0.362);
+  backdrop-filter: blur(10px);
+}
+
+.input-box {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  margin: 30px 0;
+  border-radius: 45px;
+  position: relative;
+
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(141, 178, 234, 3.412);
+  border-radius: 45px;
+  outline: none;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: rgb(10, 103, 183);
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #8dbed2;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(47, 29, 29, 0.204);
+  cursor: pointer;
+  font-size: 2vw;
+  color: #1c0845;
+  font-weight: 500;
+}
+#modes{
+  font-size: 2em;
+}
