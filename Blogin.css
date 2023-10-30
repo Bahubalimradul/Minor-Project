@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.blogin {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #212121;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0078D4;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    padding: 5px 10px;
+}
+
+.right {}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.left li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.left a:hover {
+    color: #0055A8;
+}
+
+/* Introduction Section */
+.intro {
+}
+
+.intro-content {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.intro-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.intro-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* .intro-img {
+    display: flex;
+    margin-top: 20px;
+} */
+
+/* .intro-images img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+} */
+
+/* News Letter */
+.newsletter {
+    background-image: linear-gradient( rgb(104, 91, 91), rgba(104, 91, 91, 0.231));
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    height: 150px;
+    max-width: fit-content;
+    border: whitesmoke 2px solid;
+    border-radius: 10px;
+}
+
+.newsletter h3{
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.newsletter input{
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    min-width: 400px;
+    background-color: #fff;
+}
+
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #485d69;
+    bottom: 0;
+}
+
+#footer ul {
+    display: flex;
+    padding: 5px;
+}
+
+#footer ul li{
+    padding: 5px;
+}
